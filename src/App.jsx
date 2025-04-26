@@ -7,7 +7,8 @@ const WeatherApp = () => {
   const [error, setError] = useState(null);
   const [background, setBackground] = useState("default");
 
-  const apiKey = "38a19b3b403447598ba53326252801";
+  // const apiKey = "38a19b3b403447598ba53326252801"; // somthing is change 
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   const fetchWeather = async (e) => {
     e.preventDefault();
